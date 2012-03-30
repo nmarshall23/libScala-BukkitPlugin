@@ -1,4 +1,4 @@
-//apply plugin: 'eclipse'
+apply plugin: 'eclipse'
 //apply plugin: 'groovy'
 
 apply plugin: 'scala'
@@ -15,8 +15,8 @@ project.ext.PLUGIN_NAME = "Very"
 repositories {
     mavenCentral()
     maven {
-        //url "http://repo.bukkit.org/content/repositories/releases"
-        url "http://repo.bukkit.org/content/repositories/snapshots"
+        url "http://repo.bukkit.org/content/repositories/releases"
+        //url "http://repo.bukkit.org/content/repositories/snapshots"
     }
 
 }
@@ -30,7 +30,7 @@ dependencies {
 
     // Libraries needed for scala api
     compile 'org.scala-lang:scala-library:2.8.0'
-    compile 'org.bukkit:bukkit:1.2.4-R1.1-SNAPSHOT'
+    compile 'org.bukkit:bukkit:1.2.4-R1.0'
     testCompile group: 'junit', name: 'junit', version: '4.8.2'
 }
 
