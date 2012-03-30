@@ -1,0 +1,43 @@
+//apply plugin: 'eclipse'
+//apply plugin: 'groovy'
+
+apply plugin: 'scala'
+
+version = "0.001-snapshot"
+group   = "com.gmail.nmarshall23"
+
+project.ext.HOME = "$System.env.HOME"
+project.ext.BUKKIT_HOME = project.HOME + "/bin/games/craftbukkit"
+
+project.ext.PLUGIN_NAME = "Very"
+
+
+repositories {
+    mavenCentral()
+    maven {
+        //url "http://repo.bukkit.org/content/repositories/releases"
+        url "http://repo.bukkit.org/content/repositories/snapshots"
+    }
+
+}
+
+
+
+dependencies {
+    // Libraries needed to run the scala tools
+    scalaTools 'org.scala-lang:scala-compiler:2.8.0'
+    scalaTools 'org.scala-lang:scala-library:2.8.0'
+
+    // Libraries needed for scala api
+    compile 'org.scala-lang:scala-library:2.8.0'
+    compile 'org.bukkit:bukkit:1.2.4-R1.1-SNAPSHOT'
+    testCompile group: 'junit', name: 'junit', version: '4.8.2'
+}
+
+
+task copyToServer(dependsOn: 'jar', type: Copy) {
+    from 'build/libs/'
+    into project.BUKKIT_HOME + "/plugins/"
+}
+
+

@@ -1,0 +1,3 @@
+empty project for Groovy Bukkit plugin
+need to edit src/main/resources/plugin.yml
+also add the project dir, and groovy code
