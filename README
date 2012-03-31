@@ -1,3 +1,9 @@
-empty project for Groovy Bukkit plugin
-need to edit src/main/resources/plugin.yml
-also add the project dir, and groovy code
+This is an plugin for the Bukkit Minecraft server.
+I wanted to see how hard it would be to use Scala to write plugins.
+
+Tested on the current Recommeded Build, that is, 1.2.4-R1.0
+
+It's based on my Groovy Example, thus I am still using Gradle to build the project. 
+
+To run this plugin you must start Craftbukkit with:
+ java -Xincgc -Xmx1G -cp "scala-library.jar:craftbukkit.jar" org.bukkit.craftbukkit.Main
