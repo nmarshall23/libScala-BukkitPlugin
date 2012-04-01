@@ -8,7 +8,6 @@ group   = "com.gmail.nmarshall23"
 project.ext.HOME = "$System.env.HOME"
 project.ext.BUKKIT_HOME = project.HOME + "/bin/games/craftbukkit"
 
-project.ext.PLUGIN_NAME = "Very"
 
 repositories {
     mavenCentral()
@@ -27,12 +26,14 @@ dependencies {
 
     // Libraries needed for scala api
     compile 'org.scala-lang:scala-library:2.8.0'
+    compile 'javax.servlet:servlet-api:2.5'
     compile 'org.bukkit:bukkit:1.2.4-R1.0'
+    compile 'org.bukkit:craftbukkit:1.2.4-R1.0'
     testCompile group: 'junit', name: 'junit', version: '4.8.2'
 }
 
 
-task copyToServer(dependsOn: 'jar', type: Copy) {
+task copyPlugin(dependsOn: 'jar', type: Copy) {
     from 'build/libs/'
     into project.BUKKIT_HOME + "/plugins/"
 }
