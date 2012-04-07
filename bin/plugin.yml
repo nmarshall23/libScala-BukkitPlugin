@@ -1,4 +1,0 @@
-name: name
-main: package.project
-version: 0.1
-depend: [McGroovy]
