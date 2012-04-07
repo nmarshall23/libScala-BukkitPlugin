@@ -32,6 +32,14 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.8.2'
 }
 
+jar {
+    dependsOn configurations.runtime
+    def scalalib = configurations.runtime.find { it.getName() =~ /.*scala-library.*jar/ }
+
+    from {
+	zipTree(scalalib)
+	}
+}
 
 task copyPlugin(dependsOn: 'jar', type: Copy) {
     from 'build/libs/'

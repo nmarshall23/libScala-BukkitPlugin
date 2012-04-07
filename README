@@ -1,9 +1,7 @@
 This is an plugin for the Bukkit Minecraft server.
-I wanted to see how hard it would be to use Scala to write plugins.
-
-Tested on the current Recommeded Build, that is, 1.2.4-R1.0
+It packages the scala library needed to run plugins written in scala.
 
 It's based on my Groovy Example, thus I am still using Gradle to build the project. 
 
-To run this plugin you must start Craftbukkit with:
- java -Xincgc -Xmx1G -cp "scala-library.jar:craftbukkit.jar" org.bukkit.craftbukkit.Main
+Now you don't have to add the scala-library.jar to your classpath.
+Your plugins just need to depend on this plugin.
