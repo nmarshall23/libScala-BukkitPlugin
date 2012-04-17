@@ -2,7 +2,7 @@ apply plugin: 'eclipse'
 
 apply plugin: 'scala'
 
-version = "0.001-snapshot"
+version = "0.1"
 group   = "com.gmail.nmarshall23"
 
 project.ext.HOME = "$System.env.HOME"
@@ -27,8 +27,7 @@ dependencies {
     // Libraries needed for scala api
     compile 'org.scala-lang:scala-library:2.8.0'
     compile 'javax.servlet:servlet-api:2.5'
-    compile 'org.bukkit:bukkit:1.2.4-R1.0'
-    compile 'org.bukkit:craftbukkit:1.2.4-R1.0'
+    compile 'org.bukkit:bukkit:1.2.5-R1.0'
     testCompile group: 'junit', name: 'junit', version: '4.8.2'
 }
 
